@@ -25,12 +25,9 @@ PRODUCT_PACKAGES := \
 	FusedLocation \
 	Gallery \
 	Keyguard \
-	Music \
 	Mms \
 	OpenWnn \
 	PrintSpooler \
-	libWnnEngDic \
-	libWnnJpnDic \
 	libwnndict \
 	TeleService \
 	PinyinIME \
