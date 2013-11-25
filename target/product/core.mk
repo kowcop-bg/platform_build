@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
     KeyChain \
     PacProcessor \
     ProxyHandler \
-    SharedStorageBackup \
-    VpnDialogs
+    SharedStorageBackup
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_base.mk)
