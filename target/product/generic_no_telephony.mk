@@ -26,14 +26,10 @@ PRODUCT_PACKAGES := \
     Calendar \
     Camera2 \
     CertInstaller \
-    Email \
-    Exchange2 \
     FusedLocation \
-    Gallery2 \
     InputDevices \
     Keyguard \
     LatinIME \
-    Launcher2 \
     OneTimeInitializer \
     PrintSpooler \
     Provision \
@@ -60,11 +56,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    libvideoeditor_jni \
-    libvideoeditor_core \
-    libvideoeditor_osal \
-    libvideoeditor_videofilters \
-    libvideoeditorplayer \
 
 PRODUCT_PACKAGES += \
     audio.primary.default \
