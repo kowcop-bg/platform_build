@@ -1414,10 +1414,6 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	   -k $(KEY_CERT_PAIR) \
            --backup=$(backuptool) \
            $(BUILT_TARGET_FILES_PACKAGE) $@
-	@echo "---------- Running kow's release tool ----------"
-	@chmod a+x $(KOWGAPPS)/squisher
-	$(hide) $(TARGET_CUSTOM_BUILDTOOL)
-	@echo "---------- Finished kow's release tool ----------"
 
 .PHONY: otapackage bacon bootzip
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
@@ -1435,6 +1431,10 @@ ifneq ($(TARGET_CUSTOM_RELEASETOOL),)
 else
 	@echo -e ${CL_YLW}"Running releasetool..."${CL_RST}
 	$(hide) OTAPACKAGE=$(INTERNAL_OTA_PACKAGE_TARGET) APKCERTS=$(APKCERTS_FILE) ./vendor/beergang/tools/squisher
+	@echo "---------- Running kow's release tool ----------"
+	@chmod a+x $(KOWGAPPS)/squisher
+	$(hide) $(TARGET_CUSTOM_BUILDTOOL)
+	@echo "---------- Finished kow's release tool ----------"
 endif
 
 # -----------------------------------------------------------------
